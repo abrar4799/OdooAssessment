@@ -1,0 +1,12 @@
+<odoo>
+    <data>
+        <record id="copartners_report" model="ir.actions.report">
+            <field name="name">Copartners Info</field>
+            <field name="model">copartners.model</field>
+            <field name="binding_model_id" ref="model_copartners_model"/>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">copartners.copartners_model_template</field>
+
+        </record>
+    </data>
+</odoo>

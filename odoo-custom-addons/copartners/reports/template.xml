@@ -1,0 +1,49 @@
+<odoo>
+    <data>
+        <template id="copartners_model_template">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="rec">
+                    <t t-call="web.internal_layout">
+                        <div class="page">
+                            <div class="container">
+                                <div class="row">
+                                    <div>
+                                        <h1 style="color:red ; text-align:center">Copartners Report</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div >
+                                        <span style="font-size:24px;font-weight:900;">Name: </span><span t-esc="rec.name" style="font-size:20px"/><br/>
+                                        <span style="font-size:24px;font-weight:900;">Gender: </span><span t-esc="rec.gender" style="font-size:20px"/><br/>
+                                        <span style="font-size:24px;font-weight:900;">Country: </span><span t-esc="rec.country" style="font-size:20px"/><br/>
+                                        <span style="font-size:24px;font-weight:900;">Joining Date: </span><span t-esc="rec.joining_date" style="font-size:20px"/><br/>
+
+                                        <span style="font-size:24px;font-weight:900;">Tags: </span><span t-esc="rec.tag_ids.tag_name" style="font-size:20px"/><br/>
+                                        <!-- <span style="font-size:24px;font-weight:900;">Company Name: </span><span t-esc="rec.company_id.name" style="font-size:20px"/> -->
+
+                                    </div>
+
+                                </div>
+                                <div class="text-center" style="margin-top:50px">
+                                    <h3 style="color:red">Comments and Notes</h3>
+                                </div>
+                                <div class="text-center" style="margin-top:50px">
+                                    <span style="font-size:24px;font-weight:900;">Comments: </span><span t-esc="rec.comments" style="font-size:20px"/><br/>
+
+                                </div>
+                                  <div class="text-center" style="margin-top:50px">
+                                    <span style="font-size:24px;font-weight:900;">Notes: </span><span t-esc="rec.notes" style="font-size:20px"/><br/>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>
